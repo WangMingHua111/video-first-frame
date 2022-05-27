@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>视频取首帧</title>
+  <script src="../dist/src/index.js"></script>
+</head>
+
+<body>
+  <label>Url：</label>
+  <input type="text" id="url" value="movie.mp4" required>
+  
+  <br>
+  <video id="video" muted controls src="movie.mp4"></video>
+  <br>
+  <input type="submit" value="播放" onclick="play()" />
+  <input type="submit" value="截取视频首帧" onclick="snapshot()" />
+
+</body>
+<script>
+  async function play(){
+    const url = document.querySelector('#url')?.value
+    document.querySelector('#video').src = url
+  };
+  async function snapshot() {
+    const url = document.querySelector('#url')?.value
+    const base64 = await window.VideoFirstFrame(url, {
+      // width: 200,
+      // height: 200,
+      // crossOrigin: false, 
+    })
+    const img = document.createElement('img')
+    img.src = base64
+    document.body.appendChild(img)
+  }
+
+</script>
+
+</html>

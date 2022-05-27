@@ -1,0 +1,25 @@
+{
+  "name": "video-first-frame",
+  "version": "1.0.0",
+  "description": "The silent state captures the first frame of the video",
+  "main": "dist/src/index.js",
+  "private": true,
+  "scripts": {
+    "serve": "http-server -o --cors",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  },
+  "keywords": [
+    "video",
+    "firstframe"
+  ],
+  "author": "wangminghua",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.0",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.7.2",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
