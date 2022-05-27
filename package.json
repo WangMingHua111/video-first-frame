@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "The silent state captures the first frame of the video",
   "main": "dist/src/index.js",
-  "private": true,
   "scripts": {
     "serve": "http-server -o --cors",
     "test": "echo \"Error: no test specified\" && exit 1",
